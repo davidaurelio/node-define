@@ -19,3 +19,8 @@ function define() {
 }
 
 global.define = define;
+
+exports.requirejs = requirejs;
+exports.config = function(configuration) {
+  config = configuration;
+};
