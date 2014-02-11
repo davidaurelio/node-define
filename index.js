@@ -2,8 +2,7 @@ var PATH_SEPARATOR = require('path').sep;
 var requirejs = exports.requirejs = require('requirejs');
 var getStackTrace = require('./stack-trace');
 
-requirejs.config({baseUrl: process.cwd()});
-
+var config = {baseUrl: process.cwd()};
 var loadedModules = Object.create(null);
 
 var toModuleId = PATH_SEPARATOR === '/' ?
@@ -13,7 +12,9 @@ var toModuleId = PATH_SEPARATOR === '/' ?
 function define() {
   var fileName = getStackTrace(1, define)[0].getFileName();
   if (!(loadedModules[fileName])) {
-    require.cache[fileName].exports = requirejs(toModuleId(fileName));
+    var module = require.cache[fileName];
+    config.nodeRequire = module.require.bind(module);
+    module.exports = requirejs.config(config)(toModuleId(fileName));
   }
 }
 
