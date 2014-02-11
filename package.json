@@ -1,6 +1,6 @@
 {
   "name": "node-define",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "description": "Makes AMD modules require’able in node by adding a global define function",
   "main": "index.js",
   "scripts": {
