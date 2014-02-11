@@ -17,5 +17,4 @@ function define() {
   }
 }
 
-define.amd = requirejs.define.amd;
 global.define = define;
