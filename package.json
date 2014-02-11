@@ -1,0 +1,32 @@
+{
+  "name": "node-define",
+  "version": "0.0.0",
+  "description": "Makes AMD modules require’able in node by adding a global define function",
+  "main": "index.js",
+  "scripts": {
+    "test": "node test/integration.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/davidaurelio/node-define.git"
+  },
+  "keywords": [
+    "node",
+    "amd",
+    "global",
+    "define",
+    "require"
+  ],
+  "author": "David Aurelio <dev@david-aurelio.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/davidaurelio/node-define/issues"
+  },
+  "homepage": "https://github.com/davidaurelio/node-define",
+  "peerDependencies": {
+    "requirejs": ">= 0.27.1"
+  },
+  "devDependencies": {
+    "requirejs": ">= 0.27.1"
+  }
+}
