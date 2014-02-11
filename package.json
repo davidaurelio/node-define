@@ -15,7 +15,9 @@
     "amd",
     "global",
     "define",
-    "require"
+    "require",
+    "sync",
+    "synchronous"
   ],
   "author": "David Aurelio <dev@david-aurelio.com>",
   "license": "MIT",
