@@ -2,7 +2,8 @@ var PATH_SEPARATOR = require('path').sep;
 var requirejs = exports.requirejs = require('requirejs');
 var getStackTrace = require('./stack-trace');
 
-var config = {baseUrl: process.cwd()};
+requirejs.config({baseUrl: process.cwd()});
+var config = {};
 var loadedModules = Object.create(null);
 
 var toModuleId = PATH_SEPARATOR === '/' ?
